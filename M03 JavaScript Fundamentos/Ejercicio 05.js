@@ -26,34 +26,43 @@ function combinarNombres(nombre, apellido) {
    // Tu código:
    return nombre + ' ' + apellido
 }
-console.log(combinarNombres("Juan", "fernandez"));
+// console.log(combinarNombres("Juan", "fernandez"));
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
+   return 'Hola' + ' ' + nombre + '!';
 }
+// console.log(obtenerSaludo('juan'));
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
    // Tu código:
+   var área = (alto * ancho)
+   return área
 }
 
 function retornarPerimetro(lado) {
    // La función recibe como argumento la medida de un lado de un cuadrado.
    // Debes retornar su perímetro.
    // Tu código:
+
+   return lado * 4;
 }
 
 function areaDelTriangulo(base, altura) {
    // Calcula el área de un triángulo y retorna el resultado.
    // Tu código:
+   return (base * altura) / 2;
 }
 
 function deEuroAdolar(euro) {
    // Supongamos que 1 euro equivale a 1.20 dólares.
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
    // Tu código:
+   return euro * 1.20
+
 }
 
 function esVocal(letra) {
@@ -61,6 +70,9 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
+   if (letra.length > 1) { return "Dato incorrecto" }
+   if (letra === 'a', 'e', 'i', 'o', 'u') { return "Es vocal" }
+   else { return "Dato incorrecto"; }
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
