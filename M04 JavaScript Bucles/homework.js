@@ -97,7 +97,9 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
-   switch (num) {
+   switch (true) {//En este caso, utilizamos num como la expresión en la declaración switch. El case que coincide con el resultado de la expresión será ejecutado.
+      //Sin embargo, debes tener en cuenta que en este caso, las expresiones en los case no se evaluarán correctamente. El operador de módulo (%) devuelve el resto de la división, no un valor booleano. Por lo tanto, las condiciones dentro de los case no coincidirán correctamente.
+      //Para lograr el comportamiento esperado, puedes utilizar la versión original del código con la expresión true dentro de la declaración switch. Esa es la forma correcta de verificar las condiciones en este caso particular.
       case num % 3 === 0 && num % 5 === 0:
          return "fizzbuzz"
       case num % 3 === 0:
@@ -116,6 +118,18 @@ function operadoresLogicos(num1, num2, num3) {
    // Si todos los argumentos son cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
+   switch (true) {
+      case num1 > num2 && num1 > num3 && num1 > 0:
+         return "Numero 1 es mayor y positivo"
+      case num1 < 0 || num2 < 0 || num2 < 0:
+         return "Hay negativos"
+      case num3 > num1 && num3 > num2:
+         return num3 + 1
+      case num3 === 0 && num1 === 0 && num2 === 0:
+         return "Error"
+      default: return false
+
+   }
 }
 
 function esPrimo(num) {
@@ -131,6 +145,9 @@ function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+
+   if (valor === true) return "Soy verdadero";
+   else return "Soy falso"
 }
 
 function tieneTresDigitos(num) {
@@ -144,6 +161,9 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   do {
+      // Código a ejecutar al menos una vez
+    } while (condición);
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
