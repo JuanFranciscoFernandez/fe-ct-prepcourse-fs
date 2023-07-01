@@ -246,6 +246,14 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var array = []
+   for (var i = 0; i < 10; i++) {
+      if (i === 5) { continue; }; num = num + 2; array.push(num);
+   //dependiendo la funcion las instrucciones del bucle tendra un orden determinado
+   // aca primero se tiene que comprobar que cuando el numero llegue a 5 se omita y continue con la proxima iteracion.
+   }
+
+   return array
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
